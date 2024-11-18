@@ -6,3 +6,9 @@ plugins {
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.hilt) apply false
 }
+
+tasks.withType<Test> {
+    jvmArgs(
+        "-Dnet.bytebuddy.experimental=true" // Enable experimental support for Java 21
+    )
+}

@@ -31,7 +31,7 @@ fun TodoDetailsScreen(
     var descriptionError by remember { mutableStateOf(false) }
     var showDeleteDialog by remember { mutableStateOf(false) }
     
-    // Sync UI with the fetched TODO
+    // Sync UI with the fetched TODOs
     LaunchedEffect(todoItem) {
         if (todoItem != null) {
             title = todoItem!!.title

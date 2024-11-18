@@ -34,7 +34,7 @@ class TodoListViewModel @Inject constructor(
         }
     }
     
-    // Update the status of a TODO item using UpdateTodoUseCase
+    // Update the status of a TODOs item using UpdateTodoUseCase
     fun updateTodoItemStatus(id: Int, isDone: Boolean) {
         val todoItem = _todoItems.value.find { it.id == id }
         if (todoItem != null) {
